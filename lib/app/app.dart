@@ -6,11 +6,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Dashboard App',
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: AppRouter.onGenerateRoute,
-      initialRoute: '/',
+      routerConfig: router,
     );
   }
 }

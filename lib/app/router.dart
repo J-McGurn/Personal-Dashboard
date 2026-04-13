@@ -1,17 +1,22 @@
-import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../features/dashboard/view/dashboard_page.dart';
+import '../features/habits/view/habits_page.dart';
+import '../features/settings/view/settings_page.dart';
 
-class AppRouter {
-  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case '/':
-        return MaterialPageRoute(builder: (_) => const DashboardPage());
-      default:
-        return MaterialPageRoute(
-          builder: (_) => const Scaffold(
-            body: Center(child: Text('Route not found')),
-          ),
-        );
-    }
-  }
-}
+final GoRouter router = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/dashboard',
+      builder: (context, state) => const DashboardPage(),
+    ),
+    GoRoute(
+      path: '/habits',
+      builder: (context, state) => const HabitsPage(),
+    ),
+    GoRoute(
+      path: '/settings',
+      builder: (context, state) => const SettingsPage(),
+    ),
+  ],
+  initialLocation: '/dashboard',
+);
