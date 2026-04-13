@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../../app/layout/main_layout.dart';
 
-class DashboardPage extends StatelessWidget {
-  const DashboardPage({super.key});
+class HabitsPage extends StatelessWidget {
+  const HabitsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MainLayout(
-      child: Center(child: Text('Dashboard')),
+      child: Center(child: Text('Habits')),
     );
   }
 }
